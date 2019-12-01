@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Levels">
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="LEVEL 1\n5 Section"
+        android:paddingRight="10dp"
+        android:textColor="@android:color/white"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/buttonActive"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:paddingVertical="@dimen/cardview_default_radius"
+        android:background="@drawable/btn_rounded"
+        android:drawableRight="@drawable/ic_iconfinder_icon_23_star_314860"/>
+
+    <Button
+        android:layout_below="@id/buttonActive"
+        android:layout_marginVertical="30dp"
+        android:layout_width="300dp"
+        android:paddingRight="10dp"
+        android:id="@+id/buttonInactive1"
+        android:layout_height="60dp"
+        android:text="LEVEL 1\n5 Section"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="@dimen/cardview_default_radius"
+        android:background="@drawable/btn_rounded_inactive"
+        android:drawableRight="@drawable/lock"/>
+
+    <Button
+        android:layout_below="@id/buttonInactive1"
+        android:layout_width="300dp"
+        android:id="@+id/buttonInactive2"
+        android:paddingRight="10dp"
+        android:layout_height="60dp"
+        android:text="LEVEL 1\n5 Section"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="@dimen/cardview_default_radius"
+        android:background="@drawable/btn_rounded_inactive"
+        android:drawableRight="@drawable/lock"/>
+
+    <Button
+        android:layout_below="@id/buttonInactive2"
+        android:layout_width="300dp"
+        android:paddingRight="10dp"
+        android:layout_marginVertical="30dp"
+        android:id="@+id/buttonInactive3"
+        android:layout_height="60dp"
+        android:text="LEVEL 1\n5 Section"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="@dimen/cardview_default_radius"
+        android:background="@drawable/btn_rounded_inactive"
+        android:drawableRight="@drawable/lock"/>
+</RelativeLayout>

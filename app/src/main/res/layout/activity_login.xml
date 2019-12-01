@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="250dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="155dp"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="246dp"
+        android:layout_height="38dp"
+        android:entries="@array/age"
+        android:layout_below="@id/etName"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="233dp"
+
+        />
+
+    <Spinner
+        android:id="@+id/spin1"
+        android:layout_width="246dp"
+        android:layout_height="38dp"
+        android:entries="@array/favs"
+        android:layout_below="@id/spin"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_one"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="NEXT"
+        android:layout_below="@id/spin1"
+        android:layout_marginTop="170dp"
+
+        />
+
+</RelativeLayout>
