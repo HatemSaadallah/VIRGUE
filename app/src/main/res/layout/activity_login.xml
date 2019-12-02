@@ -5,13 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrez vos informatians"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"/>
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="250dp"
         android:layout_height="49dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Nom"
         android:inputType="textPersonName"
         android:layout_centerInParent="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,6 +27,14 @@
         tools:layout_editor_absoluteY="155dp"
         style="?android:attr/borderlessButtonStyle"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Âge"
+        android:layout_below="@id/etName"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"/>
     <Spinner
         android:id="@+id/spin"
         android:layout_width="246dp"
@@ -31,7 +47,13 @@
         tools:layout_editor_absoluteY="233dp"
 
         />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spin"
+        android:text="Favoris"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="35dp" />
     <Spinner
         android:id="@+id/spin1"
         android:layout_width="246dp"
@@ -48,10 +70,12 @@
         android:id="@+id/btn_one"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="NEXT"
         android:layout_below="@id/spin1"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="15dp"
+        android:text="Suivant"
 
         />
+
+
 
 </RelativeLayout>

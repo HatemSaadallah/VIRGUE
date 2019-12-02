@@ -1,7 +1,5 @@
 package com.example.virgue;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
@@ -13,15 +11,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Lesson extends AppCompatActivity {
+public class ChallengeTwo extends AppCompatActivity {
 
 
     int levelIndex = 0;
@@ -31,19 +27,19 @@ public class Lesson extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson);
+        setContentView(R.layout.activity_challenge_two);
 
         imageButton1 = (ImageButton) findViewById(R.id.imageButton4);
-        imageButton2 = (ImageButton) findViewById(R.id.imageButton5);
+        imageButton2 = (ImageButton) findViewById(R.id.imageButton7);
         imageButton3 = (ImageButton) findViewById(R.id.imageButton6);
-        imageButton4 = (ImageButton) findViewById(R.id.imageButton7);
+        imageButton4 = (ImageButton) findViewById(R.id.imageButton5);
         iv =  findViewById(R.id.sound);
 
 
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                MediaPlayer mp = MediaPlayer.create(getBaseContext(),R.raw.dogs);
+            public void onClick(View view) {
+                MediaPlayer mp = MediaPlayer.create(getBaseContext(),R.raw.lionve);
                 mp.start();
 
             }
@@ -53,13 +49,10 @@ public class Lesson extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     if (currentObject.getString("correctAnswer").matches(currentObject.getJSONArray("images").get(0).toString())) {
-                        Toast.makeText(Lesson.this, "Correct Answer", Toast.LENGTH_LONG).show();
-
-
-
+                        Toast.makeText(ChallengeTwo.this, "Correct Answer", Toast.LENGTH_LONG).show();
 
                     } else {
-                        Toast.makeText(Lesson.this, "Wrong Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Wrong Answer", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -70,15 +63,15 @@ public class Lesson extends AppCompatActivity {
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(Lesson.this, wordd.class);
+                Intent in = new Intent(ChallengeTwo.this, LionWord.class);
                 startActivity(in);
                 try {
                     if (currentObject.getString("correctAnswer").matches(currentObject.getJSONArray("images").get(1).toString())) {
-                        Toast.makeText(Lesson.this, "Correct Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Correct Answer", Toast.LENGTH_LONG).show();
 
 
                     } else {
-                        Toast.makeText(Lesson.this, "Wrong Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Wrong Answer", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -92,9 +85,9 @@ public class Lesson extends AppCompatActivity {
 
                 try {
                     if (currentObject.getString("correctAnswer").matches(currentObject.getJSONArray("images").get(2).toString())) {
-                        Toast.makeText(Lesson.this, "Correct Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Correct Answer", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(Lesson.this, "Wrong Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Wrong Answer", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -108,9 +101,9 @@ public class Lesson extends AppCompatActivity {
 
                 try {
                     if (currentObject.getString("correctAnswer").matches(currentObject.getJSONArray("images").get(3).toString())) {
-                        Toast.makeText(Lesson.this, "Correct Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Correct Answer", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(Lesson.this, "Wrong Answer", Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChallengeTwo.this, "Wrong Answer", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -123,7 +116,7 @@ public class Lesson extends AppCompatActivity {
 
     public void loadData(int level) {
         try {
-            JSONArray dataArray = new JSONArray(loadJSONFromAsset(Lesson.this));
+            JSONArray dataArray = new JSONArray(loadJSONFromAsset(ChallengeTwo.this));
             JSONObject dataLevel = dataArray.getJSONObject(level);
             currentObject = dataLevel;
 

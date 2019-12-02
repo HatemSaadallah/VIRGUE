@@ -1,0 +1,24 @@
+[
+  {
+    "level": 1,
+    "images": [
+      "cat1.png",
+      "dog1.png",
+      "horse1.png",
+      "mouse1.png"
+    ],
+    "sound": "dogs.mp3",
+    "correctAnswer": "dog1.png"
+  },
+  {
+    "level": 2,
+    "images": [
+      "horse1.png",
+      "dog1.png",
+      "mouse1.png",
+      "lion.png"
+    ],
+    "sound": "lionVoice.mp3",
+    "correctAnswer": "lion.png"
+  }
+]

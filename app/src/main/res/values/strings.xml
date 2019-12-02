@@ -21,9 +21,8 @@
         <item>More</item>
     </string-array>
     <string-array name="favs">
-        <item>Cars</item>
-        <item>Reading</item>
-        <item>Playing</item>
-        <item>Video Games</item>
+        <item>Voitures</item>
+        <item>Lecture</item>
+        <item>Football</item>
     </string-array>
 </resources>
